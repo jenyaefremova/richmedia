@@ -1,0 +1,412 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        @font-face {
+            font-family: Adieu;
+            src: url(Adieu-Regular.otf);
+        }
+
+        body {
+            margin: 0;
+
+            font-family: 'Roboto', Arial, sans-serif;
+            background: url('https://s.fbs.direct/custloads/761680031/advice_of_day/bottom.png') no-repeat 25% 90%;
+            background-color: #D9EEED;
+        }
+
+        .container {
+            position: relative;
+            width: 328px;
+            height: 379px;
+            margin: 0 auto;
+            position: relative;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+
+        .outline::after {
+            content: '';
+            position: absolute;
+            width: 328px;
+            height: 379px;
+            left: 21px;
+            top: 190px;
+
+            z-index: -999;
+
+            border: 1px solid #00BE40;
+            left: 10px;
+
+            top: 10px;
+        }
+
+        .button-wrapper {
+            margin: 0px;
+            width: 100%;
+
+            text-align: left;
+        }
+
+
+
+        .submit-button {
+            display: inline-block;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 9;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 18px;
+            width: 180px;
+            color: #f04923
+        }
+
+        .canvas {
+            position: absolute;
+            top: 0;
+
+
+
+        }
+
+        .form {
+            padding: 16px;
+            background: #FFFFFF;
+            background-image: url('https://s.fbs.direct/custloads/761680031/advice_of_day/bgc.png');
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            margin-bottom: 0;
+            height: 345px;
+            width: 294px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #09544F;
+
+        }
+
+        .link::after {
+            content: "";
+            position: absolute;
+            top: 4px;
+            right: -15px;
+            width: 6px;
+            height: 6px;
+            border-bottom: 2px solid;
+            border-left: 2px solid;
+            transform: rotate(225deg);
+        }
+
+        .positioncenter {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('https://s.fbs.direct/custloads/761680031/advice_of_day/top.png') no-repeat 75% top;
+
+        }
+
+        .image-wrapper {
+            text-align: left;
+        }
+
+        h2 {
+            color: #09544F;
+            font-family: 'Adieu', 'Roboto', Arial, sans-serif;
+            text-align: left;
+            font-size: 24px;
+            line-height: 125%;
+            margin: 12px 0;
+        }
+
+        .push_close {
+            position: absolute;
+            right: 16px;
+            top: 32px;
+        }
+
+        p {
+            color: #09544F;
+            text-align: left;
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        @media only screen and (min-height:861px) and (max-height: 980px) {
+
+
+            .positioncenter {
+                background: url('https://s.fbs.direct/custloads/761680031/advice_of_day/top2.png') no-repeat 75% -27%;
+
+            }
+
+        }
+
+        @media only screen and (min-height:742px) and (max-height: 860px) {
+            body {
+                background: url('https://s.fbs.direct/custloads/761680031/advice_of_day/bottom.png') no-repeat 25% 90%;
+                background-color: #D9EEED;
+            }
+
+            .positioncenter {
+                background: url('https://s.fbs.direct/custloads/761680031/advice_of_day/top2.png') no-repeat 75% -34%;
+
+            }
+
+        }
+
+        @media only screen and (min-height:640px) and (max-height: 741px) {
+            body {
+                background: url('https://s.fbs.direct/custloads/761680031/advice_of_day/bottom.png') no-repeat 25% 98%;
+                background-color: #D9EEED;
+            }
+
+            .positioncenter {
+                background: url('https://s.fbs.direct/custloads/761680031/advice_of_day/top.png') no-repeat 75% -4%;
+
+            }
+
+        }
+
+        @media only screen and (min-height:500px) and (max-height: 641px) {
+            body {
+                background-image: none;
+                background-color: #D9EEED;
+            }
+
+            .positioncenter {
+                background-image: none;
+
+            }
+
+        }
+    </style>
+
+
+    <div class="positioncenter">
+        <div class="push_close">
+            <a href="fbspersonalarea://pa/finances">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line y1="-1" x2="27.3577" y2="-1"
+                        transform="matrix(-0.682319 0.731055 -0.682319 -0.731055 19.6666 0)" stroke="#09544F"
+                        stroke-width="2"></line>
+                    <line y1="-1" x2="27.3577" y2="-1" transform="matrix(-0.682319 -0.731055 0.682319 -0.731055 21 20)"
+                        stroke="#09544F" stroke-width="2"></line>
+                </svg>
+            </a>
+        </div>
+
+        <div class="container" id="js-container">
+            <canvas class="canvas" id="js-canvas" width="328" height="379"></canvas>
+            <div class="outline"></div>
+            <form class="form">
+                <div class="first-part">
+                    <div class="image-wrapper">
+
+                        <img src="" id="image" alt="image" width="50">
+                    </div>
+                    <h2 id="header" align="center">{{h1 text|text|Don’t rush}}</h2>
+                    <p id="advice" align="center">
+                        {{t1 text|text|All trading strategies (even scalping) require diligent planning every time you seek a&nbsp;trade. There&rsquo;s no&nbsp;need to&nbsp;hurry unless you want to&nbsp;lose your money.}}
+                    </p>
+                </div>
+                <div class="button-wrapper" align="center" id="button-wrapper">
+                    <a href="fbspersonalarea://pa/finances" onclick="myFunction()"
+                        class="submit-button">{{b1 text|text|Trade now}}
+                        &#10095;</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+<script>
+    (function () {
+
+        'use strict';
+
+        var isDrawing, lastPoint;
+        var container = document.getElementById('js-container'),
+            canvas = document.getElementById('js-canvas'),
+            header = document.getElementById('header'),
+            advice = document.getElementById('advice'),
+            img = document.getElementById('image'),
+            canvasWidth = canvas.width,
+            canvasHeight = canvas.height,
+            ctx = canvas.getContext('2d'),
+            image = new Image(),
+            brush = new Image();
+
+        /* Массив заголовков */
+        let headers = [
+            '{{h1 text|text|Don’t rush}}',
+            '{{h2 text|text|Set a stop loss}}',
+            '{{h3 text|text|Set a take profit}}',
+            '{{h4 text|text|Double check everything }}',
+            '{{h5 text|text|Avoid trading before the news}}',
+            '{{h6 text|text|Be consistent}}',
+            '{{h7 text|text|Take a break}}',
+            '{{h8 text|text|Always have a plan B}}',
+            '{{h9 text|text|Follow the trend}}',
+            '{{h10 text|text|Control your emotions}}',
+            '{{h11 text|text|Have a decent risk-reward ratio}}',
+            '{{h12 text|text|Stay focused}}'
+        ];
+        /* Массив тел советов */
+        let advices = [
+            '{{t1 text|text|All trading strategies (even scalping) require diligent planning every time you seek a trade. There’s no need to hurry unless you want to lose your money.}}',
+            '{{t2 text|text|In Forex trading, stop-loss is essential to be profitable. Otherwise, your possible loss might get out of hand. Always control your risks to succeed.}}',
+            '{{t3 text|text|Trading without taking profit is inefficient. You can’t monitor a trade all day long. What if the price reaches your target and reverses? Put a take profit order to feel more confident.}}',
+            '{{t4 text|text|Do you have doubts about your trade? Don’t hesitate to weigh all the pros and cons one more time. If you don’t see any reason not to open it, then it’s time to take action!}}',
+            '{{t5 text|text|The news releases have two characteristics. Firstly, they are often hard to predict. Secondly, they create volatile swings in price. Wait for the market to go in a specific direction and then enter a trade.}}',
+            '{{t6 text|text|Even the best traders go through ups and downs. If you are confident in your trading strategy – don’t give up and continue to trade. A strategy often bears fruit in the long term.}}',
+            '{{t7 text|text|If you experience several consecutive losses, take a deep breath and refresh your mind. Otherwise, you may plunge into despair and make mistakes you could have avoided.}}',
+            '{{t8 text|text|What if a trade goes wrong? A trader should always have a backup plan if something doesn’t go as planned. It’s important to stay calm in turbulent times.}}',
+            '{{t9 text|text|The famous saying, “a trend is your friend,” perfectly describes how the market works. It’s more common for an asset to continue the movement in the direction of the trend. Open your trades on support lines in the uptrend.}}',
+            '{{t10 text|text|When you experience consecutive losses or triumphs in trading, you might get overwhelmed with emotions. Try to keep a cool head: fear and greed are your enemies. Slow and steady wins the race.}}',
+            '{{t11 text|text|Always calculate a risk-reward ratio before opening a trade. A 1:1 risk-reward is perfect if you know what you are doing. However, a 1:2 ratio is way more rational because even a series of bad trades won’t destroy your account.}}',
+            '{{t12 text|text|If you often get distracted, you’re likely to miss a good opportunity or open a trade without proper analysis. Put everything aside and devote some time to looking at the charts and planning.}}'
+        ];
+        /* Массив картинок в карточках */
+        let images = [];
+
+        for (let i = 1; i < 13; i++) {
+            images.push('https://s.fbs.direct/custloads/761680031/advice_of_day/' + i + '.png');
+        }
+        // рандомно показываем совет 
+        let random = Math.floor(Math.random() * 12);
+        header.innerHTML = headers[random];
+        advice.innerHTML = advices[random];
+        img.src = images[random];
+
+        // отрисовка канвас 
+        image.src = 'https://s.fbs.direct/custloads/761680031/advice_of_day/main.png';
+        image.onload = function () {
+        ctx.drawImage(image, 0, 0);
+        
+        // Show the form when Image is loaded.
+        document.querySelectorAll('.form')[0].style.visibility = 'visible';
+        };
+        brush.src = 'https://i.imgur.com/C7XG4f2.png';
+
+        canvas.addEventListener('mousedown', handleMouseDown, false);
+        canvas.addEventListener('touchstart', handleMouseDown, false);
+        canvas.addEventListener('mousemove', handleMouseMove, false);
+        canvas.addEventListener('touchmove', handleMouseMove, false);
+        canvas.addEventListener('mouseup', handleMouseUp, false);
+        canvas.addEventListener('touchend', handleMouseUp, false);
+
+        function distanceBetween(point1, point2) {
+            return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
+        }
+
+        function angleBetween(point1, point2) {
+            return Math.atan2(point2.x - point1.x, point2.y - point1.y);
+        }
+
+        // Only test every `stride` pixel. `stride`x faster,
+        // but might lead to inaccuracy
+        function getFilledInPixels(stride) {
+            if (!stride || stride < 1) {
+                stride = 1;
+            }
+
+            var pixels = ctx.getImageData(0, 0, canvasWidth, canvasHeight),
+                pdata = pixels.data,
+                l = pdata.length,
+                total = (l / stride),
+                count = 0;
+
+            // Iterate over all pixels
+            for (var i = count = 0; i < l; i += stride) {
+                if (parseInt(pdata[i]) === 0) {
+                    count++;
+                }
+            }
+
+            return Math.round((count / total) * 100);
+        }
+
+        function getMouse(e, canvas) {
+            var offsetX = 0,
+                offsetY = 0,
+                mx, my;
+
+            if (canvas.offsetParent !== undefined) {
+                do {
+                    offsetX += canvas.offsetLeft;
+                    offsetY += canvas.offsetTop;
+                } while ((canvas = canvas.offsetParent));
+            }
+
+            mx = (e.pageX || e.touches[0].clientX) - offsetX;
+            my = (e.pageY || e.touches[0].clientY) - offsetY;
+
+            return {
+                x: mx,
+                y: my
+            };
+        }
+
+
+        function handleMouseDown(e) {
+            isDrawing = true;
+            lastPoint = getMouse(e, canvas);
+        }
+
+        function handleMouseMove(e) {
+            if (!isDrawing) {
+                return;
+            }
+
+            e.preventDefault();
+
+            var currentPoint = getMouse(e, canvas),
+                dist = distanceBetween(lastPoint, currentPoint),
+                angle = angleBetween(lastPoint, currentPoint),
+                x, y;
+
+            for (var i = 0; i < dist; i++) {
+                x = lastPoint.x + (Math.sin(angle) * i) - 25;
+                y = lastPoint.y + (Math.cos(angle) * i) - 25;
+                ctx.globalCompositeOperation = 'destination-out';
+                ctx.drawImage(brush, x, y);
+            }
+
+            lastPoint = currentPoint;
+           
+        }
+
+        function handleMouseUp(e) {
+            isDrawing = false;
+            document.getElementById('button-wrapper').style.zIndex = '9';
+        }
+
+    })();
+</script>
+
+</html>
